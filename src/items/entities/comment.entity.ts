@@ -5,8 +5,8 @@ import { Item } from "./item.entity";
 @Entity()
 export class Comment extends AbstractEntity<Comment> {
     @Column()
-    content: string 
+    content: string;
 
     @ManyToOne(() => Item, (item) => item.comments)
-    item: Item
+    item: Item;
 }
